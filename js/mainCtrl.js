@@ -6,5 +6,12 @@ app.controller('mainCtrl', function($scope, myService){
 	
 	$scope.quotes = myService.getData();
 	
-	
+	$scope.addData = function(){ 
+		
+		var quoteObj = {
+			text: $scope.newQuote,
+			author: $scope.newAuthor
+		}
+		myService.addData(quoteObj);
+	};
 });
