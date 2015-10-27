@@ -7,8 +7,9 @@
 </head>
 <body ng-controller="mainCtrl">
 	
-	
-	
+	<div ng-repeat="quote in quotes">
+		{{quote.text}}<br/>--{{quote.author}}
+	</div>
 	{{test}}
 	
 	
