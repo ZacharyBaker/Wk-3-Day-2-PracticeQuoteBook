@@ -13,5 +13,13 @@ app.controller('mainCtrl', function($scope, myService){
 			author: $scope.newAuthor
 		}
 		myService.addData(quoteObj);
+		$scope.newQuote = "";
+		$scope.newAuthor = "";
+	};
+	
+	$scope.removeData = function(){
+		var str = $scope.quoteToDelete;
+		myService.removeData(str);
+		$scope.quoteToDelete = "";
 	};
 });
